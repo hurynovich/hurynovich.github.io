@@ -1,5 +1,41 @@
 <html>
+<head>
+    <title>Hello, Github pages!</title>
+    <style>
+        .side-bar {
+            background-color: red;
+            width: 250px;
+            float: left;
+        }
+        .content {
+            background-color: green;
+        }
+        .compass {
+            position: fixed;
+            background-color: blue;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            transform: rotate(12deg);
+        }
+    </style>
+    <script>
+    function updateCompasDirection(event) {
+        let compass = document.getElementById("compass");
+
+        if(typeof compass.angle !== 'undefined' && compass.angle !== null) {
+            compass.angle = compass.angle + 1;
+        } else {
+            compass.angle = 0;
+        }
+        compass.style.transform = 'rotate(' + compass.angle + 'deg)';
+    }
+    document.onmousemove = updateCompasDirection;
+    </script>
+</head>
 <body>
-    <h1>Hello, Github pages</h1>
+    <h1>Hello, Github pages!</h1>
+    <a href="overflow.html">Overflow scrollbar example</a>
 </body>
 </html>

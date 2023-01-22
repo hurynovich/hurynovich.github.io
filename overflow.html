@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+    #scroll-pane {
+        display: block;
+        background-color: red;
+        width: 200px;
+        height: 100px;
+        overflow: scroll;
+        float: left;
+    }
+    button {
+        width: 100%;
+    }
+    #text-pane {
+        text-align: center;
+    }
+</style>
+<script>
+    function upgradeText(text) {
+        var textPane = document.getElementById("text-pane");
+        textPane.innerHTML = "You pressed button " + text;
+    }
+</script>
+</head>
+<body>
+
+<div id="scroll-pane">
+    <button id="button-A" onClick="upgradeText('A')">A</button>
+    <button id="button-B" onClick="upgradeText('B')">B</button>
+    <button id="button-C" onClick="upgradeText('C')">C</button>
+    <button id="button-D" onClick="upgradeText('D')">D</button>
+    <button id="button-E" onClick="upgradeText('E')">E</button>
+    <button id="button-F" onClick="upgradeText('F')">F</button>
+    <button id="button-G" onClick="upgradeText('G')">G</button>
+    <button id="button-H" onClick="upgradeText('H')">H</button>
+</div>
+<div id="text-pane">
+    No button was pressed.
+</div>
+</body>
+</html>
